@@ -1,12 +1,5 @@
-# MySQL AWS EC2
+#!/bin/bash
 
-A project to deploy a MySQL Server on AWS EC2
-
-## Ubuntu OS
-
-- `User data`
-
-```sh
 # parameters
 config_file="/etc/mysql/mysql.conf.d/mysqld.cnf"
 new_user="newuser"
@@ -48,22 +41,3 @@ sudo ufw allow 22
 sudo ufw show added
 sudo echo "y" | sudo ufw enable
 sudo ufw status verbose
-```
-
----
-
-- Test in the EC2
-
-```sh
-mysql -unewuser -pnewpwd
-```
-
-- Test in remote host
-
-```sh
-mysql -unewuser -pnewpwd -h ec2_ip
-```
-
----
-
-[TOP](#mysql-aws-ec2)
